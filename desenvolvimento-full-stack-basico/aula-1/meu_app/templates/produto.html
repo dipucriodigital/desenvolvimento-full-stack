@@ -5,6 +5,14 @@
 <h1>Nome: {{ produto.nome }}</h1>
 <p>Quantidade: {{ produto.quantidade }} </p>
 <p>Valor: R$ {{ produto.valor }} </p>
+<hr>
+{% if produto.comentarios %}
+    <h2> Comentários </h2>
+    {% for comentario in produto.comentarios -%}
+        <p>{{ comentario.nome_autor }} - {{ comentario.texto }} - {{ comentario.n_estrela }} estrelas </p>
+    {% endfor %}
+    <hr>
+{% endif %}
 
 </body>
 </html>

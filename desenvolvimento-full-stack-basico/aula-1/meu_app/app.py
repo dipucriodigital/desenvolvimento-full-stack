@@ -74,7 +74,7 @@ def add_comentario(produto_id):
 
     autor = request.form.get("autor")
     texto = request.form.get("texto")
-    n_estrelas = request.form.get("estrelas")
+    n_estrelas = request.form.get("n_estrela")
     if n_estrelas:
         n_estrelas = int(n_estrelas)
 
