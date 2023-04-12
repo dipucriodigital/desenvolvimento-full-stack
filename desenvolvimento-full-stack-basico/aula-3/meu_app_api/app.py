@@ -112,7 +112,7 @@ def get_produto(query: ProdutoBuscaSchema):
 @app.delete('/produto', tags=[produto_tag],
             responses={"200": ProdutoDelSchema, "404": ErrorSchema})
 def del_produto(query: ProdutoBuscaSchema):
-    """Deleta um Produto a partir do id informado
+    """Deleta um Produto a partir do nome de produto informado
 
     Retorna uma mensagem de confirmação da remoção.
     """
