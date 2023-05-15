@@ -1,11 +1,11 @@
 # Minha API
 
-Este pequeno projeto faz parte do material diático da Disciplina **Desenvolvimento Full Stack Básico** 
+Este é um projeto que faz parte do material diático da **Aula 3** da disciplina **Desenvolvimento Front-end Avançado** 
 
-O objetivo aqui é ilutsrar o conteúdo apresentado ao longo das três aulas da disciplina.
+Vamos continuar o desenvolvimento da single page application (SPA) iniciada lá na segunda aula, mas desta vez consumindo o dado de uma API em vez do acesso aos dados estáticos de um arquivo JSON.
 
 ---
-## Como executar 
+## Como instalar e executar a API
 
 
 Será necessário ter todas as libs python listadas no `requirements.txt` instaladas.
