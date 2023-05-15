@@ -2,11 +2,12 @@
 
 Este é um projeto que faz parte do material diático da **Aula 3** da disciplina **Desenvolvimento Front-end Avançado** 
 
-O objetivo aqui é ilutsrar o conteúdo apresentado na segunda aula com um código simples.
+Vamos continuar o desenvolvimento da single page application (SPA) iniciada lá na segunda aula, mas desta vez consumindo o dado de uma API em vez do acesso aos dados estáticos de um arquivo JSON.
 
-Este código é resultado de uma adaptação do exemplo prático da primeira aula. Aqui, o objetivo é ilustrar os efeitos do uso da componentização no desenvolvimento de uma aplicação web. A melhor forma de fazer isso é comparando o desenvolvimento com e sem o uso do React. Como na técnica aplicada da primeira aula o desenvolvimento foi sem o React, com esse projeto você poderá comparar na prática a diferença entre os dois cenários.
 
-## Como executar alternativamente sem o Docker (ambiente de desenvolvimento)
+## Como executar o front
+
+**Primeiro será necessário a execução da API.** No projeto da API você encontra as intruções para a execução.
 
 Será necessário ter o [Nodejs, ou o npm,](https://nodejs.org/en/download/) instalado. 
 
