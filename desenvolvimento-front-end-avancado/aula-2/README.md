@@ -1,6 +1,6 @@
 # Meu Front-end em React
 
-Este pequeno projeto faz parte do material diático da Disciplina **Desenvolvimento Front-end Avançado** 
+Este é um projeto que faz parte do material diático da **Aula 2** da disciplina **Desenvolvimento Front-end Avançado** 
 
 O objetivo aqui é ilutsrar o conteúdo apresentado na segunda aula com um código simples.
 
