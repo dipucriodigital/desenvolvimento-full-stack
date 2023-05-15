@@ -1,68 +1,60 @@
+from unicodedata import category
 from pydantic import BaseModel
 from typing import Optional, List
-from model.produto import Produto
 
 
 class ProdutoSchema(BaseModel):
-    """ Define como um novo produto a ser inserido deve ser representado
-    """
-    nome: str = "Banana Prata"
-    quantidade: Optional[int] = 12
-    valor: float = 12.50
+    nome: str = "IPhone 11"
+    descricao: Optional[str] = "Na medida certa. Amplie seus horizontes com a câmera ulta-angular. "
+    marca: str = "Apple"
+    categoria: str = "Telefonia"
+    imagem: str = "https://images-americanas.b2w.io/produtos/01/00/img/338827/0/338827081_2SZ.jpg"
+    valor: float = 3599.10
 
 
 class ProdutoBuscaSchema(BaseModel):
-    """ Define como deve ser a estrutura que representa a busca. Que será
-        feita apenas com base no nome do produto.
-    """
-    nome: str = "Teste"
-
-
-class ListagemProdutosSchema(BaseModel):
-    """ Define como uma listagem de produtos será retornada.
-    """
-    produtos:List[ProdutoSchema]
-
-
-def apresenta_produtos(produtos: List[Produto]):
-    """ Retorna uma representação do produto seguindo o schema definido em
-        ProdutoViewSchema.
-    """
-    result = []
-    for produto in produtos:
-        result.append({
-            "nome": produto.nome,
-            "quantidade": produto.quantidade,
-            "valor": produto.valor,
-        })
-
-    return {"produtos": result}
+    id: Optional[int] = 1
+    nome: Optional[str] = "IPhone 11"
 
 
 class ProdutoViewSchema(BaseModel):
-    """ Define como um produto será retornado: produto + comentários.
-    """
     id: int = 1
-    nome: str = "Banana Prata"
-    quantidade: Optional[int] = 12
-    valor: float = 12.50
+    nome: str = "IPhone 11"
+    descricao: Optional[str] = "Na medida certa. Amplie seus horizontes com a câmera ulta-angular. "
+    marca: str = "Apple"
+    categoria: str = "Telefonia"
+    imagem: str = "https://images-americanas.b2w.io/produtos/01/00/img/338827/0/338827081_2SZ.jpg"
+    valor: float = 3599.10
     total_cometarios: int = 1
+    nota_media: int = 0
 
 
 class ProdutoDelSchema(BaseModel):
-    """ Define como deve ser a estrutura do dado retornado após uma requisição
-        de remoção.
-    """
     mesage: str
-    nome: str
+    id: int
 
-def apresenta_produto(produto: Produto):
-    """ Retorna uma representação do produto seguindo o schema definido em
-        ProdutoViewSchema.
-    """
+def apresenta_produto(produto):
+    nota_media = 0
+     
     return {
         "id": produto.id,
         "nome": produto.nome,
-        "quantidade": produto.quantidade,
-        "valor": produto.valor
+        "marca": produto.marca,
+        "categoria": produto.categoria,
+        "descricao": produto.descricao,
+        "imagem": produto.imagem_path,
+        "valor": float(produto.valor),
+        "price": float(produto.valor),
+        "nota_media": nota_media,
     }
+
+
+class ProdutoListaViewSchema(BaseModel):
+    produtos: List[ProdutoViewSchema]
+
+
+def apresenta_lista_produto(produtos):
+    result = []
+    for produto in produtos:
+        result.append(apresenta_produto(produto))
+    return {"produtos": result}

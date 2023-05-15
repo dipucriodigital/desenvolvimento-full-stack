@@ -6,6 +6,7 @@ export default function Item(props) {
     const [quantity, setQuantity] = useState(1)
     const [valueButton, setValueButton] = useState(true)
     const product = props.product
+    console.log("asasass"+product.valor)
 
     // Função para subtrair o valor da quantidade de um produto
     const minus = () => {
