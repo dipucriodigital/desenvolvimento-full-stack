@@ -119,3 +119,6 @@ credentials.txt
 
 # package-lock.json
 *lock.json
+
+# módulos node
+node_modules/
