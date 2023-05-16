@@ -8,7 +8,7 @@ export default function Products() {
 
   useEffect(() => {
     axios.get('http://127.0.0.1:5000/produtos')
-      .then(res => console.log(res.data))
+      .then(res => setProductList(res.data.produtos))
       .catch(error => console.log(error))
   }, [])
 
