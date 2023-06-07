@@ -6,7 +6,7 @@ from  model import Base
 
 
 class Comentario(Base):
-    __tablename__ = 'comentatio'
+    __tablename__ = 'comentario'
 
     id = Column(Integer, primary_key=True)
     texto = Column(String(4000))
