@@ -7,3 +7,4 @@ pydantic==1.10.2
 SQLAlchemy==1.4.41
 SQLAlchemy-Utils==0.38.3
 typing_extensions==4.3.0
+werkzeug==2.0.3
